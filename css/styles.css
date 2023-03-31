@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+h2 {
+  justify-content: center;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #0b977e;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 5rem;
+  padding-inline: 5rem;
+}
+
+.tasks_area {
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 3rem; */
+}
+
+.tasks {
+  list-style: none;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.task {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  cursor: move;
+  /* transition: all 0.3s; */
+}
+
+.task.dragging {
+  opacity: 0.5;
+}
+
+.drop {
+  height: 5px;
+}
+
+.tbtn {
+  /* padding: 0.1rem; */
+  border: none;
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+ion-icon {
+  display: flex;
+  justify-content: end;
+}
+.editbtn {
+  color: rgb(44, 98, 208);
+  font-size: 2.5rem;
+}
+.editbtn:hover {
+  color: rgba(44, 99, 208, 0.7);
+  cursor: pointer;
+}
+.deletebtn {
+  color: tomato;
+  font-size: 2.5rem;
+}
+.deletebtn:hover {
+  color: rgba(255, 99, 71, 0.7);
+  cursor: pointer;
+}
+
+.addbtn {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+.addbtn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
