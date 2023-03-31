@@ -12,12 +12,12 @@ const addFinishedTaskButton = finishedArea.querySelector('.addbtn');
 // General function to add new task by providing the list name
 
 const tasksLists = document.querySelectorAll('.tasks_area');
-const notStartedArea_tasks = [];
-const inProgressArea_tasks = [];
-const finishedArea_tasks = [];
-localStorage.setItem('notStartedArea', notStartedArea_tasks);
-localStorage.setItem('inProgressArea', inProgressArea_tasks);
-localStorage.setItem('finishedArea', finishedArea_tasks);
+// const notStartedArea_tasks = [];
+// const inProgressArea_tasks = [];
+// const finishedArea_tasks = [];
+// localStorage.setItem('notStartedArea', notStartedArea_tasks);
+// localStorage.setItem('inProgressArea', inProgressArea_tasks);
+// localStorage.setItem('finishedArea', finishedArea_tasks);
 const newTaskHandler = (list, name) => {
   const newTask = document.createElement('div');
   newTask.className = 'task draggable';
@@ -42,21 +42,20 @@ const newTaskHandler = (list, name) => {
   draggable.addEventListener('dragend', () => {
     draggable.classList.remove('dragging');
   });
-  localStorage.key[name].append({ info: 'New Task!' });
-  let p = document.getElementById(generatedID1);
-  const config = {
-    childList: true,
-    attributes: true,
-    characterData: true,
-    subtree: true,
-    attributeOldValue: true,
-    characterDataOldValue: true,
-  };
-  const observer = new MutationObserver((list) => {
-    console.log(list[0].target.textContent);
-    localStorage.key[name].setItem({ info: 'New Task!' });
-  });
-  observer.observe(p, config);
+  // localStorage.key[name].append({ info: 'New Task!' });
+  // let p = document.getElementById(generatedID1);
+  // const config = {
+  //   childList: true,
+  //   attributes: true,
+  //   characterData: true,
+  //   subtree: true,
+  //   attributeOldValue: true,
+  //   characterDataOldValue: true,
+  // };
+  // const observer = new MutationObserver((list) => {
+  //   console.log(list[0].target.textContent);
+  //   localStorage.key[name].setItem({ info: 'New Task!' });
+  // });
 
   tasksLists.forEach((list) => {
     list.addEventListener('dragover', (e) => {
