@@ -1,0 +1,104 @@
+.kanban {
+  display: flex;
+  padding: 30px;
+  width: 95vw;
+  background: #009578;
+  border-radius: 5px;
+}
+
+.kanban * {
+  font-family: sans-serif;
+}
+
+.column {
+  flex: 1;
+}
+
+.column:not(:last-child) {
+  margin-right: 30px;
+}
+
+.column-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: white;
+  user-select: none;
+}
+
+.item {
+  padding: 5px 5px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input {
+  font-size: 25px;
+  outline: none;
+  width: 90%;
+
+  position: relative;
+}
+.twobtn {
+  position: absolute;
+  top: 15%;
+  right: 3%;
+}
+.tbtn {
+  border: none;
+  padding: 2px;
+  margin: 0;
+  border-radius: 0.4rem;
+  background-color: white;
+}
+ion-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.editbtn {
+  color: rgb(44, 98, 208);
+  font-size: 25px;
+  /* position: absolute;
+  top: 15%;
+  right: 15%; */
+}
+.editbtn:hover {
+  color: rgba(44, 99, 208, 0.7);
+  cursor: pointer;
+}
+.deletebtn {
+  color: tomato;
+  font-size: 25px;
+  /* position: absolute;
+  top: 15%;
+  right: 1%; */
+}
+.deletebtn:hover {
+  color: rgba(255, 99, 71, 0.7);
+  cursor: pointer;
+}
+
+.dropzone {
+  height: 10px;
+  transition: background 0.15s, height 0.15s;
+  display: block;
+}
+
+.dropzone-active {
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.add-item {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
